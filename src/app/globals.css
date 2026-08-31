@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --midnight: #0b1114;
+  --deep-teal: #152a30;
+  --warm-ivory: #f3f0e8;
+  --ink: #151718;
+  --soft-white: #f7f7f3;
+  --stone: #a7aba8;
+  --muted-brass: #a58e68;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-midnight: var(--midnight);
+  --color-deep-teal: var(--deep-teal);
+  --color-warm-ivory: var(--warm-ivory);
+  --color-ink: var(--ink);
+  --color-soft-white: var(--soft-white);
+  --color-stone: var(--stone);
+  --color-muted-brass: var(--muted-brass);
+  --font-display: var(--font-cormorant);
+  --font-kr: var(--font-noto-kr);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offsets scroll targets so the fixed header never covers a section heading. */
+[id] {
+  scroll-margin-top: 6rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--soft-white);
+  color: var(--ink);
+  font-family: var(--font-noto-kr), "Apple SD Gothic Neo", sans-serif;
 }
+
+:focus-visible {
+  outline: 2px solid var(--muted-brass);
+  outline-offset: 3px;
+}
+
+/* Scroll-reveal: hidden only once JS confirms it can reveal it again. */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero entrance: plays once on load, no scroll trigger needed. */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-reveal {
+  animation: hero-fade-up 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-reveal-1 {
+  animation-delay: 0ms;
+}
+
+.hero-reveal-2 {
+  animation-delay: 150ms;
+}
+
+.hero-reveal-3 {
+  animation-delay: 300ms;
+}
+
+.hero-reveal-4 {
+  animation-delay: 450ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
