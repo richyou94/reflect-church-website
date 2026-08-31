@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Reflect Church circular logo</title>
+  <desc id="desc">Black REFLECT wordmark centered in a white circular badge</desc>
+  <circle cx="500" cy="500" r="476" fill="#FFFFFF" stroke="#E7E7E7" stroke-width="8"/>
+  <text x="500" y="558" text-anchor="middle" fill="#050505"
+        font-family="Arial Black, Helvetica Neue, Arial, sans-serif"
+        font-size="190" font-weight="900" letter-spacing="-10">REFLECT</text>
+</svg>
