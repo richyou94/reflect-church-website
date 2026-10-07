@@ -24,11 +24,11 @@ export default function Footer() {
 
       <Reveal className="relative mx-auto max-w-[1240px] px-6 py-16 sm:py-20">
         <Image
-          src="/logos/reflect-wordmark-white.svg"
+          src="/logos/reflect-logo-horizontal-white.png"
           alt="Reflect Church"
-          width={160}
-          height={35}
-          className="h-7 w-auto"
+          width={1500}
+          height={300}
+          className="h-8 w-auto object-contain sm:h-10"
         />
         <p className="mt-4 font-display text-xl font-semibold tracking-wide text-soft-white sm:text-2xl">
           {footer.tagline}

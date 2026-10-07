@@ -35,12 +35,20 @@ export default function Header() {
       <div className="mx-auto flex h-[4.5rem] max-w-[1240px] items-center justify-between px-6 py-4">
         <a href="#" className="shrink-0" aria-label="Reflect Church home">
           <Image
-            src="/logos/reflect-wordmark-white.svg"
+            src="/logos/reflect-logo-horizontal-white.png"
             alt="Reflect Church"
-            width={140}
-            height={30}
+            width={1500}
+            height={300}
             priority
-            className="h-6 w-auto sm:h-7"
+            className="hidden h-8 w-auto object-contain sm:h-9 md:block"
+          />
+          <Image
+            src="/logos/reflect-logo-stacked-white.png"
+            alt="Reflect Church"
+            width={550}
+            height={390}
+            priority
+            className="h-10 w-auto object-contain md:hidden"
           />
         </a>
 

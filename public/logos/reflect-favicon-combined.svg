@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Reflect Church combined favicon</title>
+  <desc id="desc">Three white vertical bars on black beside three black horizontal bars on white.</desc>
+  <defs>
+    <clipPath id="rounded-square">
+      <rect width="512" height="512" rx="88"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#rounded-square)">
+    <rect width="256" height="512" fill="#111111"/>
+    <rect x="256" width="256" height="512" fill="#ffffff"/>
+
+    <rect x="64" y="96" width="32" height="320" fill="#ffffff"/>
+    <rect x="128" y="96" width="32" height="320" fill="#ffffff"/>
+    <rect x="192" y="96" width="32" height="320" fill="#ffffff"/>
+
+    <rect x="288" y="128" width="160" height="32" fill="#111111"/>
+    <rect x="288" y="256" width="160" height="32" fill="#111111"/>
+    <rect x="288" y="384" width="160" height="32" fill="#111111"/>
+  </g>
+
+  <rect x="4" y="4" width="504" height="504" rx="84" fill="none" stroke="#111111" stroke-opacity="0.18" stroke-width="8"/>
+</svg>
