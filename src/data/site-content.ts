@@ -9,12 +9,14 @@ export const siteLinks = {
 };
 
 export const navLinks = [
-  { label: "ABOUT", href: "#about" },
-  { label: "I'M NEW", href: "#new" },
-  { label: "PRAYER ROOM", href: "#prayer-room" },
-  { label: "MESSAGES", href: "#messages" },
-  { label: "CONNECT", href: "#connect" },
+  { label: "ABOUT", href: "/about" },
+  { label: "I'M NEW", href: "/new" },
+  { label: "PRAYER ROOM", href: "/prayer-room" },
+  { label: "MESSAGES", href: "/messages" },
+  { label: "CONNECT", href: "/connect" },
 ];
+
+export const visitCta = { label: "VISIT US", href: "/new" };
 
 export const hero = {
   eyebrow: "REFLECT CHURCH",
@@ -22,8 +24,8 @@ export const hero = {
   koreanSubhead: "그분의 임재가 모든 것을 변화시킵니다.",
   serviceLabel: "SUNDAY WORSHIP",
   serviceTime: "매주 주일 오전 11시",
-  primaryCta: { label: "처음 오셨나요?", href: "#new" },
-  secondaryCta: { label: "오시는 길", href: "#directions" },
+  primaryCta: { label: "처음 오셨나요?", href: "/new" },
+  secondaryCta: { label: "오시는 길", href: "/new#directions" },
 };
 
 export const welcome = {
@@ -192,3 +194,46 @@ export const footer = {
   prayerRoom: { label: "PRAYER ROOM", value: "화요일–목요일 오전 10시–오후 10시" },
   nightWorship: { label: "NIGHT WORSHIP", value: "수요일 오후 8시–10시" },
 };
+
+// Per-page <title> (the root layout appends " | Reflect Church") and meta
+// descriptions. Descriptions reuse approved copy from the sections above.
+export const pageMeta = {
+  about: { title: "교회 소개", description: about.missionStatement },
+  new: { title: "처음 오셨나요?", description: newVisitor.intro[1] },
+  prayerRoom: { title: "Prayer Room", description: prayerRoom.body[1] },
+  messages: {
+    title: "Messages",
+    description: `${messages.heading} ${messages.videoTitle} – ${messages.videoSubtitle}`,
+  },
+  connect: { title: "Connect", description: connect.body },
+};
+
+export const previewCta = "자세히 보기";
+
+// Homepage preview cards. Titles and excerpts come from the existing sections.
+export const homePreviews = [
+  {
+    href: "/about",
+    eyebrow: about.eyebrow,
+    title: pageMeta.about.title,
+    excerpt: about.missionStatement,
+  },
+  {
+    href: "/prayer-room",
+    eyebrow: prayerRoom.eyebrow,
+    title: prayerRoom.heading,
+    excerpt: prayerRoom.body[1],
+  },
+  {
+    href: "/messages",
+    eyebrow: messages.eyebrow,
+    title: messages.heading,
+    excerpt: null,
+  },
+  {
+    href: "/new",
+    eyebrow: newVisitor.eyebrow,
+    title: newVisitor.heading,
+    excerpt: newVisitor.intro[4],
+  },
+];

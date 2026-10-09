@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { hero } from "@/data/site-content";
 
 export default function Hero() {
@@ -46,18 +47,18 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
+            <Link
               href={hero.primaryCta.href}
               className="border border-soft-white bg-soft-white px-7 py-3 text-sm font-medium tracking-[0.08em] text-midnight transition-colors hover:bg-transparent hover:text-soft-white"
             >
               {hero.primaryCta.label}
-            </a>
-            <a
+            </Link>
+            <Link
               href={hero.secondaryCta.href}
               className="border border-soft-white/60 px-7 py-3 text-sm font-medium tracking-[0.08em] text-soft-white transition-colors hover:border-muted-brass hover:text-muted-brass"
             >
               {hero.secondaryCta.label}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

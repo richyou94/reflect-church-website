@@ -22,9 +22,8 @@
   --font-kr: var(--font-noto-kr);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* No global smooth scrolling: with route-based navigation it would animate the
+   jump to the top of every new page. Anchors only occur as /new#directions. */
 
 /* Offsets scroll targets so the fixed header never covers a section heading. */
 [id] {

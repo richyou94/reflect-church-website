@@ -2,7 +2,12 @@ import { newVisitor } from "@/data/site-content";
 import FaqAccordion from "@/components/FaqAccordion";
 import Reveal from "@/components/Reveal";
 
-export default function NewVisitor() {
+type HeadingProps = {
+  /** Page-title sections render their heading as the page's single h1. */
+  as?: "h1" | "h2";
+};
+
+export default function NewVisitor({ as: Heading = "h2" }: HeadingProps) {
   const { directions } = newVisitor;
 
   return (
@@ -12,9 +17,9 @@ export default function NewVisitor() {
           <p className="text-xs font-medium tracking-[0.3em] text-muted-brass">
             {newVisitor.eyebrow}
           </p>
-          <h2 className="mt-5 font-display text-3xl font-semibold text-ink sm:text-4xl">
+          <Heading className="mt-5 font-display text-3xl font-semibold text-ink sm:text-4xl">
             {newVisitor.heading}
-          </h2>
+          </Heading>
 
           <div className="mt-8 max-w-2xl space-y-5 border-t border-ink/10 pt-8">
             {newVisitor.intro.map((paragraph) => (
@@ -27,9 +32,9 @@ export default function NewVisitor() {
 
         <div id="directions" className="mt-16 grid gap-10 border-t border-ink/10 pt-10 sm:mt-20 sm:pt-14 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h3 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+            <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
               {directions.heading}
-            </h3>
+            </h2>
             <p className="mt-4 text-base leading-relaxed text-ink">
               {directions.address}
             </p>
@@ -66,9 +71,9 @@ export default function NewVisitor() {
         </div>
 
         <Reveal className="mt-16 border-t border-ink/10 pt-10 sm:mt-20 sm:pt-14">
-          <h3 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+          <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
             FAQ
-          </h3>
+          </h2>
           <div className="mt-8">
             <FaqAccordion />
           </div>

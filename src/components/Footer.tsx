@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { footer, navLinks, siteLinks } from "@/data/site-content";
 import Reveal from "@/components/Reveal";
 
@@ -68,13 +69,13 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Footer">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-xs font-medium tracking-[0.15em] text-soft-white/80 transition-colors hover:text-muted-brass"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 

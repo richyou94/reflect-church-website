@@ -2,7 +2,12 @@ import Image from "next/image";
 import { prayerRoom, siteLinks } from "@/data/site-content";
 import Reveal from "@/components/Reveal";
 
-export default function PrayerRoom() {
+type HeadingProps = {
+  /** Page-title sections render their heading as the page's single h1. */
+  as?: "h1" | "h2";
+};
+
+export default function PrayerRoom({ as: Heading = "h2" }: HeadingProps) {
   return (
     <section id="prayer-room" className="bg-warm-ivory">
       <div className="mx-auto grid max-w-[1240px] gap-12 px-6 py-20 sm:py-28 lg:grid-cols-2 lg:items-center lg:gap-16">
@@ -20,9 +25,9 @@ export default function PrayerRoom() {
           <p className="text-xs font-medium tracking-[0.3em] text-muted-brass">
             {prayerRoom.eyebrow}
           </p>
-          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl">
+          <Heading className="mt-5 font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl">
             {prayerRoom.heading}
-          </h2>
+          </Heading>
           <p className="mt-2 text-sm font-medium tracking-[0.1em] text-muted-brass">
             {prayerRoom.reference}
           </p>

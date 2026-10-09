@@ -19,9 +19,9 @@ export default function About() {
         </Reveal>
 
         <div className="mt-16 border-t border-ink/10 pt-10 sm:mt-20 sm:pt-14">
-          <h3 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+          <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
             {about.visionHeading}
-          </h3>
+          </h2>
 
           <ol className="mt-10 space-y-12 sm:mt-14 sm:space-y-16">
             {about.visionItems.map((item, index) => (
@@ -34,9 +34,9 @@ export default function About() {
                     {item.number}
                   </span>
                   <div>
-                    <h4 className="text-lg font-semibold leading-snug text-ink sm:text-xl">
+                    <h3 className="text-lg font-semibold leading-snug text-ink sm:text-xl">
                       {item.heading}
-                    </h4>
+                    </h3>
                     <p className="mt-3 max-w-2xl text-base leading-relaxed text-ink/80">
                       {item.body}
                     </p>

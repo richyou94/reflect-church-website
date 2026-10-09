@@ -1,7 +1,12 @@
 import { messages, siteLinks } from "@/data/site-content";
 import Reveal from "@/components/Reveal";
 
-export default function Messages() {
+type HeadingProps = {
+  /** Page-title sections render their heading as the page's single h1. */
+  as?: "h1" | "h2";
+};
+
+export default function Messages({ as: Heading = "h2" }: HeadingProps) {
   return (
     <section id="messages" className="bg-midnight">
       <div className="mx-auto max-w-[1240px] px-6 py-20 sm:py-28">
@@ -9,9 +14,9 @@ export default function Messages() {
           <p className="text-xs font-medium tracking-[0.3em] text-muted-brass">
             {messages.eyebrow}
           </p>
-          <h2 className="mt-5 font-display text-3xl font-semibold text-soft-white sm:text-4xl">
+          <Heading className="mt-5 font-display text-3xl font-semibold text-soft-white sm:text-4xl">
             {messages.heading}
-          </h2>
+          </Heading>
         </Reveal>
 
         <Reveal delay={100} className="mt-12 grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-start lg:gap-16">
@@ -29,9 +34,9 @@ export default function Messages() {
             <p className="text-xs font-medium tracking-[0.2em] text-muted-brass">
               {messages.videoSubtitle}
             </p>
-            <h3 className="mt-2 font-display text-2xl font-semibold text-soft-white">
+            <h2 className="mt-2 font-display text-2xl font-semibold text-soft-white">
               {messages.videoTitle}
-            </h3>
+            </h2>
             <a
               href={siteLinks.youtube}
               target="_blank"

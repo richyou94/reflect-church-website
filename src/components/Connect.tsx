@@ -4,11 +4,17 @@ import { useState, type FormEvent } from "react";
 import { connect, siteLinks } from "@/data/site-content";
 import Reveal from "@/components/Reveal";
 
-export default function Connect() {
+type HeadingProps = {
+  /** Page-title sections render their heading as the page's single h1. */
+  as?: "h1" | "h2";
+};
+
+export default function Connect({ as: Heading = "h2" }: HeadingProps) {
   const [consentChecked, setConsentChecked] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    // Prevent any submission until the pastor confirms a delivery method
+    // TODO: delivery integration is pending confirmation. Prevent any
+    // submission until the pastor confirms a delivery method
     // (e.g. Formspree, Resend, or a custom API route). No data is sent yet.
     event.preventDefault();
   };
@@ -20,9 +26,9 @@ export default function Connect() {
           <p className="text-xs font-medium tracking-[0.3em] text-muted-brass">
             CONNECT
           </p>
-          <h2 className="mt-5 font-display text-3xl font-semibold text-ink sm:text-4xl">
+          <Heading className="mt-5 font-display text-3xl font-semibold text-ink sm:text-4xl">
             {connect.heading}
-          </h2>
+          </Heading>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/80">
             {connect.body}
           </p>
