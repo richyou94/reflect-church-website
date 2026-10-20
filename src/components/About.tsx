@@ -41,8 +41,8 @@ export default function About() {
                   delay={index * 100}
                   className="grid gap-4 border-t border-ink/10 pt-8 sm:grid-cols-[100px_1fr] sm:gap-10"
                 >
-                  <span className="font-display text-4xl font-semibold text-muted-brass sm:text-5xl">
-                    {item.number}
+                  <span className="font-display text-4xl font-semibold lining-nums text-muted-brass sm:text-5xl">
+                    {item.number}.
                   </span>
                   <div>
                     <h3 className="text-lg font-semibold leading-snug text-ink sm:text-xl">
