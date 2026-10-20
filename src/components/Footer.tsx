@@ -35,25 +35,7 @@ export default function Footer() {
           {footer.tagline}
         </p>
 
-        <div className="mt-12 grid gap-10 border-t border-white/10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <p className="text-xs font-medium tracking-[0.2em] text-muted-brass">
-              {footer.sundayWorship.label}
-            </p>
-            <p className="mt-2 text-sm text-soft-white/80">{footer.sundayWorship.value}</p>
-          </div>
-          <div>
-            <p className="text-xs font-medium tracking-[0.2em] text-muted-brass">
-              {footer.prayerRoom.label}
-            </p>
-            <p className="mt-2 text-sm text-soft-white/80">{footer.prayerRoom.value}</p>
-          </div>
-          <div>
-            <p className="text-xs font-medium tracking-[0.2em] text-muted-brass">
-              {footer.nightWorship.label}
-            </p>
-            <p className="mt-2 text-sm text-soft-white/80">{footer.nightWorship.value}</p>
-          </div>
+        <div className="mt-12 border-t border-white/10 pt-10">
           <div>
             <p className="text-xs font-medium tracking-[0.2em] text-muted-brass">CONTACT</p>
             <p className="mt-2 text-sm text-soft-white/80">{siteLinks.address}</p>

@@ -19,6 +19,24 @@ export default function Welcome() {
 
         <Reveal delay={100}>
           <dl className="mt-14 grid gap-10 border-t border-ink/10 pt-10 sm:grid-cols-3">
+            {welcome.schedule.map((item) => (
+              <div key={item.label} className="border-l border-muted-brass/50 pl-5">
+                <dt className="text-xs font-medium tracking-[0.2em] text-muted-brass">
+                  {item.label}
+                </dt>
+                <dd className="mt-2 text-base leading-relaxed text-ink">
+                  <p>{item.title}</p>
+                  {item.times.map((time) => (
+                    <p key={time}>{time}</p>
+                  ))}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </Reveal>
+
+        <Reveal delay={200}>
+          <dl className="mt-10 grid gap-10 border-t border-ink/10 pt-10 sm:grid-cols-2">
             {welcome.details.map((detail) => (
               <div key={detail.label} className="border-l border-muted-brass/50 pl-5">
                 <dt className="text-xs font-medium tracking-[0.2em] text-muted-brass">

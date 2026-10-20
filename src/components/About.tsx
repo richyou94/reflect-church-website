@@ -4,12 +4,23 @@ import Reveal from "@/components/Reveal";
 export default function About() {
   return (
     <section id="about" className="bg-soft-white">
-      <div className="mx-auto max-w-[1240px] px-6 py-20 sm:py-28">
-        <p className="text-xs font-medium tracking-[0.3em] text-muted-brass">
-          {about.eyebrow}
-        </p>
+      <div className="mx-auto max-w-[1240px] px-6 pb-20 pt-32 sm:pb-28 sm:pt-36">
+        <Reveal>
+          <h1 className="max-w-4xl font-display text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+            {about.heading}
+          </h1>
+        </Reveal>
 
-        <Reveal className="mt-8 grid gap-10 border-t border-ink/10 pt-10 sm:grid-cols-[160px_1fr] sm:gap-16">
+        <Reveal delay={100} className="mt-4">
+          <p className="max-w-3xl text-lg leading-relaxed text-ink/80 sm:text-xl">
+            {about.statement}
+          </p>
+        </Reveal>
+
+        <Reveal
+          delay={200}
+          className="mt-16 grid gap-10 border-t border-ink/10 pt-10 sm:mt-20 sm:grid-cols-[160px_1fr] sm:gap-16"
+        >
           <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
             {about.missionHeading}
           </h2>

@@ -29,14 +29,27 @@ export const hero = {
 };
 
 export const welcome = {
+  schedule: [
+    {
+      label: "SUNDAY WORSHIP",
+      title: "주일예배",
+      times: ["오전 11시"],
+    },
+    {
+      label: "FRIDAY WORSHIP",
+      title: "금요예배",
+      times: ["오후 8시 30분"],
+    },
+    {
+      label: "PRAYER ROOM",
+      title: "기도실",
+      times: ["화–목 오전 10시–오후 10시", "금요일 오전 10시–오후 6시"],
+    },
+  ],
   eyebrow: "WELCOME HOME",
   heading: "비추는 교회에 오신 것을 환영합니다.",
   body: "일산과 파주에서 교회를 찾고 계신다면, 비추는 교회에 오셔서 함께 예배드리고 하나님을 더욱 깊이 알아가는 믿음의 여정에 동참하시길 초대합니다.",
   details: [
-    {
-      label: "SUNDAY WORSHIP",
-      value: "매주 주일 오전 11시",
-    },
     {
       label: "LOCATION",
       value: "경기도 고양시 일산서구 미래로 200, 덕이빌딩 4층",
@@ -50,6 +63,8 @@ export const welcome = {
 
 export const about = {
   eyebrow: "ABOUT REFLECT",
+  heading: "HIS PRESENCE CHANGES EVERYTHING",
+  statement: "우리는 그분의 임재 안에서 모든 것이 변화됨을 믿습니다.",
   missionHeading: "MISSION",
   missionStatement:
     "우리는 그분의 임재 안에서 하나님의 나라가 개인과 도시와 열방 가운데 임하는 것을 보기 위해 존재합니다.",
@@ -190,9 +205,6 @@ export const connect = {
 
 export const footer = {
   tagline: "HIS PRESENCE CHANGES EVERYTHING",
-  sundayWorship: { label: "SUNDAY WORSHIP", value: "매주 주일 오전 11시" },
-  prayerRoom: { label: "PRAYER ROOM", value: "화요일–목요일 오전 10시–오후 10시" },
-  nightWorship: { label: "NIGHT WORSHIP", value: "수요일 오후 8시–10시" },
 };
 
 // Per-page <title> (the root layout appends " | Reflect Church") and meta
