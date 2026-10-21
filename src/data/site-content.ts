@@ -118,13 +118,49 @@ export const prayerRoom = {
     "기도실은 누구나 이용할 수 있습니다. 운영 시간 외에 기도실 이용을 원하시거나 다른 문의 사항이 있으시면 인스타그램 메시지 또는 이메일로 연락해 주세요.",
 };
 
+// Builds the canonical watch URL for a YouTube playlist ID. Keeps the URL
+// pattern defined in one place instead of repeating it per section.
+function youtubePlaylist(playlistId: string) {
+  return {
+    playlistId,
+    playlistUrl: `https://youtube.com/playlist?list=${playlistId}`,
+  };
+}
+
 export const messages = {
   eyebrow: "LATEST MESSAGES",
   heading: "말씀과 예배",
-  videoId: "S_xB-zsKYpk",
-  videoTitle: "REFLECT Worship",
-  videoSubtitle: "Worship Session 001",
-  moreLink: "유튜브에서 더 보기",
+  // Shown instead of a video grid when the YouTube API key is missing or the
+  // playlist request fails. Never exposes technical error details.
+  unavailableMessage:
+    "최신 영상을 불러오지 못했습니다. 전체 재생목록에서 확인해 주세요.",
+  // Labels for the in-page video modal opened by clicking a card.
+  videoModal: {
+    cardAriaSuffix: "동영상 재생",
+    watchOnYoutubeLabel: "WATCH ON YOUTUBE",
+    closeLabel: "동영상 닫기",
+    previousLabel: "이전 영상 보기",
+    nextLabel: "다음 영상 보기",
+  },
+  // Two YouTube playlists on the /messages page, each rendered as a grid of
+  // the latest 4 videos: sermon messages ("말씀") and worship sessions
+  // ("예배").
+  playlists: {
+    sermons: {
+      heading: "MESSAGES",
+      koreanLabel: "말씀",
+      ...youtubePlaylist("PLPujatSeLgtY"),
+      ctaLabel: "VIEW FULL PLAYLIST",
+      ctaAriaLabel: "말씀(Messages) 전체 재생목록을 새 탭에서 YouTube로 보기",
+    },
+    worship: {
+      heading: "WORSHIP",
+      koreanLabel: "예배",
+      ...youtubePlaylist("PLCBx1hf1Cium8QHu1HF0_qYo0oXBtL42f"),
+      ctaLabel: "VIEW FULL PLAYLIST",
+      ctaAriaLabel: "예배(Worship) 전체 재생목록을 새 탭에서 YouTube로 보기",
+    },
+  },
 };
 
 export const newVisitor = {
@@ -217,7 +253,7 @@ export const pageMeta = {
   prayerRoom: { title: "Prayer Room", description: prayerRoom.body[1] },
   messages: {
     title: "Messages",
-    description: `${messages.heading} ${messages.videoTitle} – ${messages.videoSubtitle}`,
+    description: `${messages.heading} – ${messages.playlists.sermons.heading}(${messages.playlists.sermons.koreanLabel}) & ${messages.playlists.worship.heading}(${messages.playlists.worship.koreanLabel})`,
   },
   connect: { title: "Connect", description: connect.body },
 };
