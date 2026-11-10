@@ -61,22 +61,31 @@ export default function Footer() {
             ))}
           </nav>
 
-          <div className="flex gap-x-6 text-xs font-medium tracking-[0.15em]">
+          <div className="flex items-center gap-x-3">
             <a
               href={siteLinks.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-soft-white/80 transition-colors hover:text-muted-brass"
+              aria-label="Reflect Church Instagram"
+              className="flex h-12 w-12 items-center justify-center rounded-full text-soft-white/80 transition-colors hover:text-muted-brass focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-muted-brass focus-visible:ring-offset-2 focus-visible:ring-offset-midnight"
             >
-              INSTAGRAM
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7 fill-none stroke-current stroke-[1.6] sm:h-[30px] sm:w-[30px]">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4.2" />
+                <circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none" />
+              </svg>
             </a>
             <a
               href={siteLinks.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-soft-white/80 transition-colors hover:text-muted-brass"
+              aria-label="Reflect Church YouTube"
+              className="flex h-12 w-12 items-center justify-center rounded-full text-soft-white/80 transition-colors hover:text-muted-brass focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-muted-brass focus-visible:ring-offset-2 focus-visible:ring-offset-midnight"
             >
-              YOUTUBE
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7 fill-none stroke-current stroke-[1.6] sm:h-[30px] sm:w-[30px]">
+                <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
+                <path d="M10.5 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none" />
+              </svg>
             </a>
           </div>
         </div>
