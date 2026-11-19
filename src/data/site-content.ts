@@ -67,7 +67,7 @@ export const about = {
   statement: "우리는 그분의 임재 안에서 모든 것이 변화됨을 믿습니다.",
   missionHeading: "MISSION",
   missionStatement:
-    "우리는 그분의 임재 안에서 하나님의 나라가 개인과 도시와 열방 가운데 임하는 것을 보기 위해 존재한다.",
+    "우리는 그분의 임재 안에서 하나님의 나라가 개인과 도시와 열방 가운데 임하는 것을 보기 위해 존재합니다.",
   visionHeading: "VISION",
   // Vision 1's body keeps the previously approved wording: the newer supplied
   // replacement ends mid-sentence at a comma and is awaiting a complete version.
